@@ -1,6 +1,6 @@
-###2024-Q3-web-mobiili
+### 2024-Q3-web-mobiili
 
-##Tämä repositorio sisältää tekemiäni harjoituksia React Native -sovelluksista kurssilla Web- ja hybriditeknologiat mobiiliohjelmoinnissa IN00CT08-3007
+## Tämä repositorio sisältää tekemiäni harjoituksia React Native -sovelluksista kurssilla Web- ja hybriditeknologiat mobiiliohjelmoinnissa IN00CT08-3007
 
 - Projektissa first:
   -- Exchange Rate Converter
