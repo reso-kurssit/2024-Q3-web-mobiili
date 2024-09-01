@@ -11,7 +11,7 @@ export default function HomeScreen() {
             - Modal (viikkotehtävä, viikko 2) <br/>
             - Custom navigation with React Native Paper (viikkotehtävä, viikko 3) <br/>
             - Exchange Rate Converter (harjoitus) <br/>
-</Text>
+            </Text>
         </View>
     );
 };
