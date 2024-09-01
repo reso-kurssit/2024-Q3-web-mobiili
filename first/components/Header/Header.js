@@ -8,11 +8,19 @@ const Header = () => {
     return (
         <View style={styles.header}>
         <Text style={styles.title}>Exercises</Text>
+        <View style={styles.nav}>
+          <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+            <Text style={styles.link}>Home</Text>
+          </TouchableOpacity>
+        </View>
 
-        <Text style={styles.secondTitle}>Assignments (week 1 - X)</Text>
+        <Text style={styles.secondTitle}>Assignments (week 1, 2, .....)</Text>
         <View style={styles.nav}>
           <TouchableOpacity onPress={() => navigation.navigate('HeartRate')}>
             <Text style={styles.link}>Target Heart Rate</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('MyModal')}>
+            <Text style={styles.link}>Modal</Text>
           </TouchableOpacity>
           </View>
 
