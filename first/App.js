@@ -8,7 +8,7 @@ import { useFonts } from 'expo-font';
 import HomeScreen from './components/HomeScreen/HomeScreen';
 import HeartRate from './components/HeartRate/HeartRate';
 import MyModal from './components/MyModal/MyModal';
-import DefaultScreen from './components/DefaultScreen/DefaultScreen';
+import DefaultScreen from './components/SecondScreen/SecondScreen';
 import TodoList from './components/TodoList/TodoList';
 const Stack = createStackNavigator();
 
@@ -39,7 +39,7 @@ const CustomAppBar = () => {
         }
       >
         <Menu.Item onPress={() => { setMenuVisible(false); navigation.navigate('Home'); }} title="Home" />
-        <Menu.Item onPress={() => { setMenuVisible(false); navigation.navigate('DefaultScreen'); }} title="Second Screen" />
+        <Menu.Item onPress={() => { setMenuVisible(false); navigation.navigate('SecondScreen'); }} title="Second Screen" />
         <Menu.Item onPress={() => { setMenuVisible(false); navigation.navigate('HeartRate'); }} title="Heart Rate" />
         <Menu.Item onPress={() => { setMenuVisible(false); navigation.navigate('MyModal'); }} title="Modal" />
         <Menu.Item onPress={() => { setMenuVisible(false); navigation.navigate('TodoList'); }} title="Todo List" />
@@ -56,7 +56,7 @@ const ForwardButton = () => {
         icon="arrow-right" 
         color="#000000"
         backgroundColor="#ffffff"
-        onPress={() => navigation.navigate('DefaultScreen')} 
+        onPress={() => navigation.navigate('SecondScreen')} 
       />
     </View>
   );
@@ -73,12 +73,11 @@ export default function App() {
 
           <Stack.Navigator initialRouteName='Home'>
             <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Home', headerRight: () => <ForwardButton />, }} />
-            <Stack.Screen name="DefaultScreen" component={DefaultScreen}  options={{ title: 'Second Screen' }} />
+            <Stack.Screen name="SecondScreen" component={DefaultScreen}  options={{ title: 'Second Screen' }} />
             <Stack.Screen name="HeartRate" component={HeartRate} options={{ title: 'Heart Rate' }} />
             <Stack.Screen name="MyModal" component={MyModal} options={{ title: 'Modal Message' }} />
             <Stack.Screen name="TodoList" component={TodoList} options={{ title: 'Todo List' }} />
           </Stack.Navigator>
-
           
         </View>
       </NavigationContainer>
