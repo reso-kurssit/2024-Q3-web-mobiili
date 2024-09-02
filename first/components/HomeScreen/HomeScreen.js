@@ -5,16 +5,16 @@ import { View, Text, StyleSheet } from "react-native";
 export default function HomeScreen() {
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Tästä sovelluksesta löytyy navigoimalla nämä viikkotehtävien sovellusosat:<br/><br/>
+            <Text style={styles.title}>Tästä sovelluksesta löytyy navigoimalla nämä viikkotehtävien sovellusosat: {"\n"}{"\n"}
             
-            - Target Heart Rate ( <i>viikko 1</i> ) <br/>
-            - Modal ( <i>viikko 2</i> ) <br/>
-            - Custom navigation with React Native Paper ( <i>viikko 3</i> ) <br/>
-            - Todo list ( <i>viikko 4</i> ) <br/>
-            - <s>Tulossa ( <i>viikko 5</i> )</s> <br/>
-            - <s>Tulossa ( <i>viikko 6</i> )</s> <br/>
-            - <s>Tulossa ( <i>viikko 7</i> )</s> <br/>
-            - <s>Tulossa ( <i>viikko 8</i> )</s> <br/>
+            - Target Heart Rate ( <Text style={styles.italic}>viikko 1</Text> ){"\n"}
+            - Modal ( <Text style={styles.italic}>viikko 2</Text> ) {"\n"}
+            - Custom navigation with React Native Paper ( <Text style={styles.italic}>viikko 3</Text> ) {"\n"}
+            - Todo list ( <Text style={styles.italic}>viikko 4</Text> ) {"\n"}
+            - Tulossa ( <Text style={styles.italic}>viikko 5</Text> ) {"\n"}
+            - Tulossa ( <Text style={styles.italic}>viikko 6</Text> ) {"\n"}
+            - Tulossa ( <Text style={styles.italic}>viikko 7</Text> ) {"\n"}
+            - Tulossa ( <Text style={styles.italic}>viikko 8</Text> )
             </Text>
         </View>
     );
@@ -29,5 +29,8 @@ const styles = StyleSheet.create({
         marginTop: 20,
         fontSize: 18,
         fontWeight: 'bold',
+    },
+    italic: {
+        fontStyle: 'italic',
     }
 });
