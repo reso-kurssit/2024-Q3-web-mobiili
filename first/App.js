@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { Platform, StyleSheet, View } from 'react-native';
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Appbar, Menu, Provider } from 'react-native-paper';
@@ -10,6 +10,8 @@ import HeartRate from './components/HeartRate/HeartRate';
 import MyModal from './components/MyModal/MyModal';
 import DefaultScreen from './components/SecondScreen/SecondScreen';
 import TodoList from './components/TodoList/TodoList';
+import Map from './components/Map/Map';
+
 const Stack = createStackNavigator();
 
 const CustomAppBar = () => {
@@ -43,6 +45,7 @@ const CustomAppBar = () => {
         <Menu.Item onPress={() => { setMenuVisible(false); navigation.navigate('HeartRate'); }} title="Heart Rate" />
         <Menu.Item onPress={() => { setMenuVisible(false); navigation.navigate('MyModal'); }} title="Modal" />
         <Menu.Item onPress={() => { setMenuVisible(false); navigation.navigate('TodoList'); }} title="Todo List" />
+        <Menu.Item onPress={() => { setMenuVisible(false); navigation.navigate('Map'); }} title="Map" />
       </Menu>
     </Appbar.Header>
   );
@@ -77,6 +80,8 @@ export default function App() {
             <Stack.Screen name="HeartRate" component={HeartRate} options={{ title: 'Heart Rate' }} />
             <Stack.Screen name="MyModal" component={MyModal} options={{ title: 'Modal Message' }} />
             <Stack.Screen name="TodoList" component={TodoList} options={{ title: 'Todo List' }} />
+            <Stack.Screen name="Map" component={Map} options={{ title: 'Map' }} />
+
           </Stack.Navigator>
           
         </View>
@@ -92,6 +97,11 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     marginRight: 10,
+  },
+  mapPlaceholder: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 
 });

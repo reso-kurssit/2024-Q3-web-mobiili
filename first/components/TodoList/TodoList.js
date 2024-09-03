@@ -64,24 +64,22 @@ export default function TodoList() {
         <SafeAreaView style={styles.container}>
             <StatusBar backgroundColor="#61dafb" barStyle="dark-content" />
             <AddTodo addTask={addTask} /> 
-            <ScrollView>
-                <FlatList
-                    data={todos}
-                    keyExtractor={(item) => item.id.toString()}
-                    renderItem={({ item }) => (
-                        <View style={styles.container}>
-                            <TouchableOpacity onPress={() => toggleTask(item.id)} style={styles.item}>
-                                <Text style={item.completed ? styles.completedText : styles.text}>{item.title}</Text>
+            <FlatList
+                data={todos}
+                keyExtractor={(item) => item.id.toString()}
+                renderItem={({ item }) => (
+                    <View style={styles.container}>
+                        <TouchableOpacity onPress={() => toggleTask(item.id)} style={styles.item}>
+                            <Text style={item.completed ? styles.completedText : styles.text}>{item.title}</Text>
+                        </TouchableOpacity>
+                        {item.completed && (
+                            <TouchableOpacity onPress={() => deleteTask(item.id)} style={styles.deleteTaskButton}>
+                                <MaterialIcons name="delete" size={24} color="red" /><Text>Delete row</Text>
                             </TouchableOpacity>
-                            {item.completed && (
-                                <TouchableOpacity onPress={() => deleteTask(item.id)} style={styles.deleteTaskButton}>
-                                    <MaterialIcons name="delete" size={24} color="red" /><Text>Delete row</Text>
-                                </TouchableOpacity>
-                            )}
-                        </View>
-                    )}
-                />
-            </ScrollView>
+                        )}
+                    </View>
+                )}
+            />
         </SafeAreaView>
     );
 }
