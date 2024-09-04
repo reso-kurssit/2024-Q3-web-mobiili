@@ -11,7 +11,7 @@ export default function HomeScreen() {
             - Modal ( <Text style={styles.italic}>viikko 2</Text> ) {"\n"}
             - Custom navigation with React Native Paper ( <Text style={styles.italic}>viikko 3</Text> ) {"\n"}
             - Todo list ( <Text style={styles.italic}>viikko 4</Text> ) {"\n"}
-            - Tulossa ( <Text style={styles.italic}>viikko 5</Text> ) {"\n"}
+            - Map with multiple markers ( <Text style={styles.italic}>viikko 5</Text> ) {"\n"}{"\n"}
             - Tulossa ( <Text style={styles.italic}>viikko 6</Text> ) {"\n"}
             - Tulossa ( <Text style={styles.italic}>viikko 7</Text> ) {"\n"}
             - Tulossa ( <Text style={styles.italic}>viikko 8</Text> )

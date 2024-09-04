@@ -53,6 +53,7 @@ export default function Map() {
                         <Marker
                             key={index}
                             coordinate={marker.coordinate}
+                            image={require('./marker.png')}
                         />
                     ))}
             </MapView>
