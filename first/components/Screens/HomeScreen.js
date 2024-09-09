@@ -12,10 +12,10 @@ export default function HomeScreen() {
             - Custom navigation with React Native Paper ( <Text style={styles.italic}>viikko 3</Text> ) {"\n"}
             - Todo list ( <Text style={styles.italic}>viikko 4</Text> ) {"\n"}
             - Map with multiple markers ( <Text style={styles.italic}>viikko 5</Text> ) {"\n"}
-            - Retrieving data from API ( <Text style={styles.italic}>viikko 6</Text> ) {"\n"}{"\n"}
+            - Retrieving data from API ( <Text style={styles.italic}>viikko 6</Text> ) {"\n"}
+            - Todo List with Reducer ( <Text style={styles.italic}>viikko 7</Text> ) {"\n"}{"\n"}
             
-            - Tulossa ( <Text style={styles.italic}>viikko 7</Text> ) {"\n"}
-            - Tulossa ( <Text style={styles.italic}>viikko 8</Text> )
+            - Tulossa: Shopping List with Firebase ( <Text style={styles.italic}>viikko 8</Text> )
             </Text>
         </View>
     );

@@ -5,13 +5,14 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { Appbar, Menu, Provider } from 'react-native-paper';
 import { useFonts } from 'expo-font';
 
-import HomeScreen from './components/HomeScreen/HomeScreen';
+import HomeScreen from './components/Screens/HomeScreen';
+import SecondScreen from './components/Screens/SecondScreen';
 import HeartRate from './components/HeartRate/HeartRate';
 import MyModal from './components/MyModal/MyModal';
-import DefaultScreen from './components/SecondScreen/SecondScreen';
 import TodoList from './components/TodoList/TodoList';
 import Map from './components/Map/Map';
 import Steam from './components/SteamStats/Steam';
+import TodoWithReducer from './components/TodoWithReducer/TodoWithReducer';
 
 const Stack = createStackNavigator();
 
@@ -51,6 +52,7 @@ const CustomAppBar = () => {
         <Menu.Item onPress={() => { setMenuVisible(false); navigation.navigate('TodoList'); }} title="Viikko 4" />
         <Menu.Item onPress={() => { setMenuVisible(false); navigation.navigate('Map'); }} title="Viikko 5" />
         <Menu.Item onPress={() => { setMenuVisible(false); navigation.navigate('Steam'); }} title="Viikko 6" />
+        <Menu.Item onPress={() => { setMenuVisible(false); navigation.navigate('TodoWithReducer'); }} title="Viikko 7" />
       </Menu>
     </Appbar.Header>
   );
@@ -81,12 +83,13 @@ export default function App() {
           
           <Stack.Navigator initialRouteName='Home'>
             <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Home', headerRight: () => <ForwardButton />, }} />
-            <Stack.Screen name="SecondScreen" component={DefaultScreen}  options={{ title: 'Second Screen' }} />
+            <Stack.Screen name="SecondScreen" component={SecondScreen}  options={{ title: 'Second Screen' }} />
             <Stack.Screen name="HeartRate" component={HeartRate} options={{ title: 'Heart Rate' }} />
             <Stack.Screen name="MyModal" component={MyModal} options={{ title: 'Modal Message' }} />
             <Stack.Screen name="TodoList" component={TodoList} options={{ title: 'Todo List' }} />
             <Stack.Screen name="Map" component={Map} options={{ title: 'Map: useita markkereita kartalle' }} />
             <Stack.Screen name="Steam" component={Steam} options={{ title: 'Steam: Uutiset pelistä Baldur\'\s Gate III' }} />
+            <Stack.Screen name="TodoWithReducer" component={TodoWithReducer} options={{ title: 'Todo With Reducer' }} />
           </Stack.Navigator>
           
         </View>
