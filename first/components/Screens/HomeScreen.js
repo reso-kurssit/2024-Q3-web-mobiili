@@ -13,9 +13,8 @@ export default function HomeScreen() {
             - Todo list ( <Text style={styles.italic}>viikko 4</Text> ) {"\n"}
             - Map with multiple markers ( <Text style={styles.italic}>viikko 5</Text> ) {"\n"}
             - Retrieving data from API ( <Text style={styles.italic}>viikko 6</Text> ) {"\n"}
-            - Todo List with Reducer ( <Text style={styles.italic}>viikko 7</Text> ) {"\n"}{"\n"}
-            
-            - Tulossa: Shopping List with Firebase ( <Text style={styles.italic}>viikko 8</Text> )
+            - Todo List with Reducer ( <Text style={styles.italic}>viikko 7</Text> ) {"\n"}
+            - Shopping List with Firebase ( <Text style={styles.italic}>viikko 8</Text> )
             </Text>
         </View>
     );
