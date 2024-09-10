@@ -61,14 +61,14 @@ export default function TodoList() {
   };
 
     return (
-        <SafeAreaView style={styles.container}>
-            <StatusBar backgroundColor="#61dafb" barStyle="dark-content" />
+        <SafeAreaView>
+            <StatusBar backgroundColor="#2c3525" barStyle="light-content" />
             <AddTodo addTask={addTask} /> 
             <FlatList
                 data={todos}
                 keyExtractor={(item) => item.id.toString()}
                 renderItem={({ item }) => (
-                    <View style={styles.container}>
+                    <View>
                         <TouchableOpacity onPress={() => toggleTask(item.id)} style={styles.item}>
                             <Text style={item.completed ? styles.completedText : styles.text}>{item.title}</Text>
                         </TouchableOpacity>
@@ -85,11 +85,7 @@ export default function TodoList() {
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        marginTop: StatusBar.currentHeight || 0,
-        padding: 2,
-    },
+
     item: {
         backgroundColor: "#e2eddd",
         padding: 20,

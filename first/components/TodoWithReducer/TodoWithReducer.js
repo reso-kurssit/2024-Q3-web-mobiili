@@ -41,18 +41,18 @@ export default function TodoWithReducer() {
 
 
     return (
-        <SafeAreaView style={styles.container}>
+        <SafeAreaView>
             <Image
                 source={backgroundimage[0]}
                 style={styles.backgroundImage}
             />
-            <StatusBar backgroundColor="#61dafb" barStyle="dark-content" />
+            <StatusBar backgroundColor="#2c3525" barStyle="light-content" />
             <AddTodo addTask={addTask} />
             <FlatList
                 data={todos}
                 keyExtractor={(item) => item.id.toString()}
                 renderItem={({ item }) => (
-                    <View style={styles.container}>
+                    <View>
                         <TouchableOpacity onPress={() => dispatch({ type: "TOGGLE_TASK", id: item.id })} style={styles.item}>
                             <Text style={item.completed ? styles.completedText : styles.text}>{item.title}</Text>
                         </TouchableOpacity>
@@ -70,15 +70,11 @@ export default function TodoWithReducer() {
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        marginTop: StatusBar.currentHeight || 0,
-        padding: 2,
-    },
     item: {
         backgroundColor: "#d2d2d2",
         padding: 8,
         marginHorizontal: 14,
+        marginVertical: 9,
         borderRadius: 8
     },
     title: {
@@ -99,8 +95,8 @@ const styles = StyleSheet.create({
         padding: 6,
         borderRadius: 10,
         position: "absolute",
-        right: 38,
-        top: 7,
+        right: 19,
+        top: 14,
         flexDirection: 'row',
         alignItems: 'center',
     },

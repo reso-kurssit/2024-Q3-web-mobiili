@@ -16,7 +16,7 @@ export default function ShoppingList() {
                 source={backgroundimage[0]}
                 style={styles.backgroundImage}
             />
-            <StatusBar backgroundColor="#61dafb" barStyle="dark-content" />
+            <StatusBar backgroundColor="#2c3525" barStyle="light-content" />
             <AddItem/>
             <GetItems/>
            
