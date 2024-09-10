@@ -13,6 +13,7 @@ import TodoList from './components/TodoList/TodoList';
 import Map from './components/Map/Map';
 import Steam from './components/SteamStats/Steam';
 import TodoWithReducer from './components/TodoWithReducer/TodoWithReducer';
+import ShoppingList from './components/ShoppingList/ShoppingList';
 
 const Stack = createStackNavigator();
 
@@ -53,6 +54,7 @@ const CustomAppBar = () => {
         <Menu.Item onPress={() => { setMenuVisible(false); navigation.navigate('Map'); }} title="Viikko 5" />
         <Menu.Item onPress={() => { setMenuVisible(false); navigation.navigate('Steam'); }} title="Viikko 6" />
         <Menu.Item onPress={() => { setMenuVisible(false); navigation.navigate('TodoWithReducer'); }} title="Viikko 7" />
+        <Menu.Item onPress={() => { setMenuVisible(false); navigation.navigate('ShoppingList'); }} title="Viikko 8" />
       </Menu>
     </Appbar.Header>
   );
@@ -90,6 +92,7 @@ export default function App() {
             <Stack.Screen name="Map" component={Map} options={{ title: 'Map: useita markkereita kartalle' }} />
             <Stack.Screen name="Steam" component={Steam} options={{ title: 'Steam: Uutiset pelistä Baldur\'\s Gate III' }} />
             <Stack.Screen name="TodoWithReducer" component={TodoWithReducer} options={{ title: 'Todo With Reducer' }} />
+            <Stack.Screen name="ShoppingList" component={ShoppingList} options={{ title: 'Shopping List' }} />
           </Stack.Navigator>
           
         </View>
