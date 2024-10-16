@@ -46,7 +46,6 @@ const CustomAppBar = () => {
         }
       >
         <Menu.Item onPress={() => { setMenuVisible(false); navigation.navigate('Home'); }} title="Home" />
-        
         <Menu.Item onPress={() => { setMenuVisible(false); navigation.navigate('HeartRate'); }} title="Viikko 1" />
         <Menu.Item onPress={() => { setMenuVisible(false); navigation.navigate('MyModal'); }} title="Viikko 2" />
         <Menu.Item onPress={() => { setMenuVisible(false); navigation.navigate('SecondScreen'); }} title="Viikko 3" />
